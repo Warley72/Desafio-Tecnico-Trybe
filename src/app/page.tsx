@@ -1,7 +1,9 @@
+import ModalLogin from "@/components/layout/ModalLogin";
+
 export default function Home() {
     return (
         <div>
-            <h1>Hello World</h1>
+            <ModalLogin />
         </div>
     );
 }
