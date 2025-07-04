@@ -4,7 +4,7 @@ import { useCepStore } from "@/store/cepStore"
 import { cepSchema } from "@/lib/cepSchema"
 import { useState } from "react"
 
-export default function BuscarCepPage() {
+export default function BuscarCep() {
     const { cep, setCep, resultado, erro, loading, buscarCep } = useCepStore()
     const [validacaoErro, setValidacaoErro] = useState("")
 
@@ -40,7 +40,7 @@ export default function BuscarCepPage() {
             </form>
 
             {validacaoErro && <p className="text-red-500 mt-2">{validacaoErro}</p>}
-            
+
             {erro && <p className="text-red-600 mt-4">{erro}</p>}
 
             {resultado && (
