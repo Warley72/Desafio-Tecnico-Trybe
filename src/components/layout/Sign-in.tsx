@@ -56,9 +56,6 @@ export default function SignIn() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex-col gap-2 w-full">
-                    <Link href={"/buscarcep"} className="w-full">
-                        <Button type="submit" className="w-full">Login</Button>
-                    </Link>
                     <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
                         <Link href={""} className="w-full sm:w-1/2">
                             <Button className="w-full flex items-center justify-center gap-2">
@@ -76,6 +73,9 @@ export default function SignIn() {
                             </Button>
                         </Link>
                     </div>
+                    <Link href={"/buscarcep"} className="w-full">
+                        <Button type="submit" className="w-full">Login</Button>
+                    </Link>
                 </CardFooter>
             </Card>
         </div>

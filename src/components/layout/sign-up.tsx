@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function SignUp() {
     return (
         <div className="flex justify-center items-center h-screen p-4">
-            <Card className="w-full max-w-md">
+            <Card className="w-full max-w-sm">
                 <CardHeader className="flex flex-col items-center space-y-2 text-center">
                     <h1 className="text-xl font-semibold">Create an account</h1>
                     <span className="text-sm text-muted-foreground">
