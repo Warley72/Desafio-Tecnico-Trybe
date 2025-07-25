@@ -8,7 +8,7 @@ interface CepState {
     loading: boolean;
     erro: string;
     setCep: (value: string) => void;
-    buscarCep: () => Promise<void>;
+    buscarCep: () => Promise<ViaCepResponse | null>;
 }
 
 export const useCepStore = create<CepState>((set, get) => ({
@@ -23,8 +23,10 @@ export const useCepStore = create<CepState>((set, get) => ({
         try {
             const data = await fetchCep(cep);
             set({ resultado: data });
+            return data; // <-- Adicione isso aqui
         } catch (error: any) {
             set({ erro: error.message });
+            return null; // <-- Para evitar erro no componente
         } finally {
             set({ loading: false });
         }
